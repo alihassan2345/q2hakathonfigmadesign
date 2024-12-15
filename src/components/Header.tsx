@@ -4,8 +4,8 @@ import { VscListFilter } from "react-icons/vsc";
 import { FaHeart } from "react-icons/fa";
 import { FaBell } from "react-icons/fa6";
 import { IoMdSettings } from "react-icons/io";
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Header = () => {
   return (
