@@ -23,7 +23,7 @@
   },
   
   "dependencies": {
-<<<<<<< HEAD
+
   
     
   "next": "^15.0.4",
@@ -37,12 +37,8 @@
     
   "react-icons": "^5.4.0"
   
-=======
-    "next": "^15.0.4",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-icons": "^5.4.0"
->>>>>>> 3daaef5702b960c392a5dd81f11ee7c77b2928b8
+
+    
   },
   
   "devDependencies": {
