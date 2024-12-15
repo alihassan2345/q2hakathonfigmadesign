@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+
 
 export default function CarDetailsPage() {
   return (
@@ -56,7 +58,7 @@ export default function CarDetailsPage() {
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
               <div className="md:w-1/3">
                 <Image
-                  src="/images/View.png"
+                  src="/images/image 7.png"
                   alt="Car"
                   width={300}
                   height={200}
@@ -71,13 +73,34 @@ export default function CarDetailsPage() {
                 </p>
                 <p className="font-semibold text-lg">$80.00 / Day</p>
               </div>
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-lg">
+              <Link href={'/payment'}><button className="bg-blue-600 text-white px-4 py-2 rounded-lg">
                 Rent Now
-              </button>
+              </button></Link>
             </div>
           </div>
 
-         
+          {/* Reviews */}
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-lg font-semibold">Reviews</h2>
+            <div className="space-y-4">
+              {['Alex Stanton', 'Alex stanton'].map((name, index) => (
+                <div key={index} className="flex gap-4">
+                  <Image
+                    src="/images/Profil.png"
+                    alt="Reviewer"
+                    width={50}
+                    height={50}
+                    className="rounded-full"
+                  />
+                  <div className="flex-1">
+                    <h3 className="font-semibold">{name}</h3>
+                    <p className="text-gray-500 text-sm">"Amazing car and service!"</p>
+                  </div>
+                  <p className="text-yellow-500">4.8 ★</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Similar Cars */}
           <div className="bg-white p-6 rounded-lg shadow">
@@ -89,7 +112,7 @@ export default function CarDetailsPage() {
                   className="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition"
                 >
                   <Image
-                    src={`/images/Catalog4 (2)-${index + 1}.png`}
+                    src={`/images/image 8.png`}
                     alt={car}
                     width={200}
                     height={150}
@@ -97,9 +120,9 @@ export default function CarDetailsPage() {
                   />
                   <h3 className="text-center mt-4 font-semibold">{car}</h3>
                   <p className="text-center text-gray-600">$60.00 / Day</p>
-                  <button className="block bg-blue-600 text-white w-full py-2 rounded-lg mt-4">
+                  <Link href={'/payment'}><button className="block bg-blue-600 text-white w-full py-2 rounded-lg mt-4">
                     Rent Now
-                  </button>
+                  </button></Link>
                 </div>
               ))}
             </div>
