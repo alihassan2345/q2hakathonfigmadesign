@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link';
 import { useState } from 'react';
+import Image from 'next/image';
 export default function Home() {
   const [filters, setFilters] = useState({
     type: '',
@@ -130,7 +131,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredCars.map((car) => (
               <div key={car.name} className="bg-white rounded shadow overflow-hidden">
-                <img src={'/images/image 7.png'} alt={car.name} className="w-50% h-20 object-cover" />
+                <Image src={'/images/image 7.png'} alt={car.name} width={500} height={200} className=" object-cover"></Image>
                 <div className="p-4">
                   <h3 className="text-lg font-bold">{car.name}</h3>
                   <p className="text-sm text-gray-600">{car.type}</p>
