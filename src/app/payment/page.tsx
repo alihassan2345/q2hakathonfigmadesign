@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+
 
 export default function CheckoutPage() {
   return (
@@ -131,9 +133,9 @@ export default function CheckoutPage() {
               I agree with terms and conditions and have reviewed all rental
               details.
             </p>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg mt-4">
+            <Link href={'/dashboard'}><button className="bg-blue-600 text-white px-4 py-2 rounded-lg mt-4">
               Confirm Booking
-            </button>
+            </button></Link>
           </div>
         </div>
 
@@ -157,9 +159,9 @@ export default function CheckoutPage() {
             <p className="text-gray-600">Rental Price</p>
             <p className="font-semibold">$80.00</p>
           </div>
-          <button className="bg-blue-600 text-white w-full py-2 rounded-lg">
+          <Link href={'/dashboard'}><button className="bg-blue-600 text-white w-full py-2 rounded-lg">
             Apply Now
-          </button>
+          </button></Link>
         </div>
       </div>
     </div>
