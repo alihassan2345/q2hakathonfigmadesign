@@ -94,7 +94,7 @@ export default function CarDetailsPage() {
                   />
                   <div className="flex-1">
                     <h3 className="font-semibold">{name}</h3>
-                    <p className="text-gray-500 text-sm">"Amazing car and service!"</p>
+                    <p className="text-gray-500 text-sm">Amazing car and service!</p>
                   </div>
                   <p className="text-yellow-500">4.8 ★</p>
                 </div>
